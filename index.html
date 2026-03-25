@@ -35,10 +35,13 @@ padding:80px 20px;
 }
 
 /* TITLES */
-h1{
-font-size:42px;
-text-align:center;
-margin-bottom:20px;
+h1 {
+font-size: 38px;
+font-weight: 700;
+background: linear-gradient(90deg, #1f5f45, #2E7D5B);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 20px;
 }
 
 h2{
@@ -50,23 +53,56 @@ p{
 color:#555;
 line-height:1.7;
 }
-
+/* HERO PREMIUM */
+.hero {
+padding: 100px 20px;
+text-align: center;
+}
 /* SERVICE BLOCK */
-.service{
+.service {
 display:flex;
 align-items:center;
 gap:50px;
 margin-bottom:80px;
+
+background:#fff;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.service:hover {
+transform:translateY(-6px);
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
+
+.service:hover {
+transform:translateY(-6px);
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
 }
 
 .service img{
 width:45%;
-border-radius:10px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.service:hover img {
+transform:scale(1.03);
 }
 
 .service-text{
 width:55%;
 }
+
+.service-text h2 {
+margin-bottom:10px;
+}
+
+.service-text p {
+margin-bottom:10px;
+
 
 /* REVERSE */
 .service.reverse{
@@ -166,7 +202,7 @@ We act as your strategic logistics partner, managing operations, optimizing supp
 
 <!-- SERVICES -->
 
-<section class="section">
+<section class="section hero">
 
 <!-- SUPPLY CHAIN -->
 <div class="service">
