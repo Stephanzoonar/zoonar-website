@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Zoonar Logistics</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -17,43 +16,24 @@ background:#fff;
 color:#111;
 }
 
-/* NAV */
-header{
-position:absolute;
-width:100%;
-top:0;
-left:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-z-index:10;
-}
-
-header img{
-height:40px;
-}
-
 /* HERO */
 .hero{
-height:100vh;
-background:url('logo.png') center/cover no-repeat;
+height:90vh;
+background:url('zoonarbanner.jpg') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
-position:relative;
 text-align:center;
 color:#fff;
+position:relative;
 }
 
 .hero::after{
 content:"";
 position:absolute;
-top:0;
-left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.55);
+background:rgba(0,0,0,0.5);
 }
 
 .hero-content{
@@ -64,225 +44,161 @@ padding:20px;
 }
 
 .hero h1{
-font-size:52px;
+font-size:48px;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
 color:#ddd;
 margin-bottom:30px;
 }
 
-/* BUTTONS */
 .btn{
-display:inline-block;
 padding:14px 26px;
 border-radius:6px;
 text-decoration:none;
 font-weight:600;
 margin:5px;
-transition:0.3s;
+display:inline-block;
 }
 
-.primary{
-background:#2E7D5B;
-color:#fff;
-}
-
-.primary:hover{
-background:#25694c;
-}
-
-.secondary{
-border:1px solid #fff;
-color:#fff;
-}
-
-.secondary:hover{
-background:#fff;
-color:#000;
-}
+.primary{background:#2E7D5B;color:#fff;}
+.secondary{border:1px solid #fff;color:#fff;}
 
 /* SECTION */
 .section{
-padding:100px 20px;
 max-width:1200px;
 margin:auto;
+padding:100px 20px;
 }
 
-.section h2{
-text-align:center;
-margin-bottom:60px;
-font-size:34px;
+/* SERVICE BLOCKS */
+.service{
+display:flex;
+align-items:center;
+gap:60px;
+margin-bottom:100px;
 }
 
-/* SERVICES */
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:40px;
+.service:nth-child(even){
+flex-direction:row-reverse;
 }
 
-.card{
-border-radius:12px;
-overflow:hidden;
-background:#fff;
-transition:0.3s;
-border:1px solid #eee;
+.service img{
+width:50%;
+border-radius:10px;
 }
 
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
+.service-text{
+width:50%;
 }
 
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
+.service-text h2{
+font-size:30px;
+margin-bottom:20px;
 }
 
-.card-content{
-padding:25px;
-}
-
-.card h3{
-margin-bottom:12px;
-font-size:20px;
-}
-
-.card p{
+.service-text p{
 color:#555;
-line-height:1.6;
+line-height:1.7;
 }
 
-/* SECONDARY */
-.secondary-services{
+/* ADDITIONAL */
+.additional{
 text-align:center;
 color:#555;
-font-size:16px;
 line-height:2;
-}
-
-/* CONTACT */
-.contact-box{
-text-align:center;
-background:#f9f9f9;
-padding:60px 20px;
-border-radius:12px;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:40px;
-font-size:14px;
-color:#777;
+font-size:18px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 
-.hero h1{
-font-size:34px;
+.service{
+flex-direction:column !important;
 }
 
-.hero{
-height:90vh;
+.service img,
+.service-text{
+width:100%;
+}
+
+.hero h1{
+font-size:32px;
 }
 
 }
 </style>
 
 </head>
-<body>
 
-<header>
-<img src="zoonarbanner.png">
-</header>
+<body>
 
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content">
 <h1>Control Your Supply Chain.<br>Scale Your Business.</h1>
 <p>
-Zoonar Logistics delivers full-service logistics management — from strategy to execution.
-We create efficient, scalable and reliable supply chains worldwide.
+Full-service logistics management — from strategy to execution.
 </p>
 
-<a href="#contact" class="btn primary">Request a Quote</a>
-<a href="#services" class="btn secondary">Explore Services</a>
+<a href="#" class="btn primary">Request a Quote</a>
+<a href="#services" class="btn secondary">Our Services</a>
 </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section" id="services">
-<h2>Core Services</h2>
 
-<div class="services">
-
-<div class="card">
+<div class="service">
 <img src="zoonartrucks.png">
-<div class="card-content">
-<h3>Logistics Control Tower</h3>
+<div class="service-text">
+<h2>Logistics Control Tower</h2>
 <p>
-We manage your entire logistics operation from one central point.
-Full visibility, coordination and performance control across all partners and flows.
+We act as the central hub of your logistics operations.
+From planning to execution, we manage all flows, partners and performance.
+You gain full control, visibility and strategic decision-making power.
 </p>
 </div>
 </div>
 
-<div class="card">
+<div class="service">
 <img src="zoonarbanner.jpg">
-<div class="card-content">
-<h3>Supply Chain Management</h3>
+<div class="service-text">
+<h2>Supply Chain Management</h2>
 <p>
-End-to-end optimization of your supply chain.
-We reduce costs, improve efficiency and build scalable logistics structures.
+We design and optimize complete supply chains.
+Reducing costs, improving efficiency and building scalable systems that support your growth.
+From supplier to end customer — we manage the entire process.
 </p>
 </div>
 </div>
 
-<div class="card">
+<div class="service">
 <img src="zoonar-green.png">
-<div class="card-content">
-<h3>Global Transport</h3>
+<div class="service-text">
+<h2>Global Transport</h2>
 <p>
-Sea freight, air freight and road transport.
-We connect your business to global markets with reliable logistics solutions.
+We organize international transport by sea, air and road.
+Flexible, reliable and cost-efficient solutions tailored to your business.
+Connecting you to global markets without complexity.
 </p>
 </div>
 </div>
 
-</div>
 </section>
 
-<!-- SECONDARY -->
+<!-- ADDITIONAL -->
 <section class="section">
-<h2>Additional Services</h2>
+<h2 style="text-align:center;margin-bottom:40px;">Additional Services</h2>
 
-<div class="secondary-services">
-Documentation & Customs<br>
+<div class="additional">
+Documentation & Customs Handling<br>
 Warehousing & Storage<br>
-Distribution & Delivery
+Distribution & Last-Mile Delivery
 </div>
 
 </section>
-
-<!-- CONTACT -->
-<section class="section">
-<div class="contact-box" id="contact">
-<h2>Let’s Work Together</h2>
-<p style="margin-bottom:20px;">info@zoonarlogistics.com</p>
-
-<a href="#" class="btn primary">Request a Quote</a>
-</div>
-</section>
-
-<footer>
-© 2026 Zoonar Logistics — Global Logistics Partner
-</footer>
 
 </body>
 </html>
