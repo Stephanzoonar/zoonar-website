@@ -87,7 +87,8 @@ background:radial-gradient(circle at 30% 50%, #0B3D2E, #050807);
 
 
 .hero h1{
-
+padding-top:120px;
+}
 font-size:56px;
 
 margin-bottom:20px;
@@ -176,13 +177,18 @@ transition:0.3s;
 
 .card:hover{
 
+
 transform:translateY(-5px);
 
 border-color:#3FAF7D;
 
 }
-
-
+.btn.primary {
+box-shadow: 0 10px 30px rgba(0,255,150,0.2);
+}
+.btn.primary:hover {
+transform: translateY(-2px);
+}
 
 /* CONTACT */
 
@@ -280,7 +286,9 @@ font-size:14px;
 
 
 
-<a href="#contact" class="btn primary">Request a Quote</a>
+<a href="#contact" class="btn primary" style="box-shadow:0 10px 30px rgba(0,255,150,0.2);">
+Request a Quote
+</a>
 
 <a href="#contact" class="btn secondary">Contact Us</a>
 
