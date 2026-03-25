@@ -1,431 +1,298 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Zoonar Logistics</title>
-
-
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-
-
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;}
-
-
-
-body{
-
-
-
-font-family:'Inter',sans-serif;
-
-background:#0A0F0D;
-
-color:#EAEAEA;
-
+/* RESET */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
-
-
-.container{width:90%;max-width:1200px;margin:auto;}
-
-
-
-/* NAV */
-
-nav{
-
-position:fixed;
-
-width:100%;
-
-background:rgba(10,15,13,0.85);
-
-backdrop-filter:blur(10px);
-
-padding:20px 0;
-
-z-index:1000;
-
+body {
+font-family: 'Inter', sans-serif;
+background: radial-gradient(circle at 20% 30%, #0B3D2E 0%, #06110D 40%, #050807 100%);
+color: #EAEAEA;
 }
 
-
-
-.logo{
-
-font-weight:700;
-
-letter-spacing:2px;
-
+/* CONTAINER */
+.container {
+width: 90%;
+max-width: 1200px;
+margin: auto;
 }
 
+/* HEADER */
+header {
+padding: 20px;
+}
 
+header img {
+height: 40px;
+}
 
 /* HERO */
-
-.hero{
-
-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-background:radial-gradient(circle at 30% 50%, #0B3D2E, #050807);
-
+.hero {
+height: 100vh;
+display: flex;
+align-items: center;
 }
 
-
-
-.hero h1{
-padding-top:120px;
-}
-font-size:56px;
-
-margin-bottom:20px;
-
+.hero h1 {
+font-size: 56px;
+margin-bottom: 20px;
 }
 
-
-
-.hero p{
-
-color:#A0A0A0;
-
-max-width:600px;
-
+.hero p {
+max-width: 600px;
+margin-bottom: 30px;
+color: #A0A0A0;
 }
 
-
-
-.btn{
-
-padding:14px 28px;
-
-margin-top:20px;
-
-display:inline-block;
-
-text-decoration:none;
-
-font-weight:600;
-
-border-radius:4px;
-
+/* BUTTONS */
+.btn {
+padding: 15px 25px;
+border-radius: 8px;
+text-decoration: none;
+display: inline-block;
+margin-right: 10px;
+transition: 0.3s;
 }
 
-
-
-.primary{background:#3FAF7D;color:#000;}
-
-.secondary{border:1px solid #3FAF7D;color:#3FAF7D;margin-left:10px;}
-
-
-
-/* SECTIONS */
-
-.section{padding:100px 0;}
-
-
-
-.section h2{
-
-font-size:36px;
-
-margin-bottom:40px;
-
-}
-
-
-
-/* SERVICES */
-
-.services{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:30px;
-
-}
-
-
-
-.card{
-
-background:#111816;
-
-padding:30px;
-
-border:1px solid rgba(255,255,255,0.05);
-
-transition:0.3s;
-
-}
-
-
-
-.card:hover{
-
-
-transform:translateY(-5px);
-
-border-color:#3FAF7D;
-
-}
 .btn.primary {
+background: #3FAF7D;
+color: #000;
 box-shadow: 0 10px 30px rgba(0,255,150,0.2);
 }
+
 .btn.primary:hover {
 transform: translateY(-2px);
+box-shadow: 0 15px 40px rgba(0,255,150,0.3);
+}
+
+.btn.secondary {
+border: 1px solid #3FAF7D;
+color: #3FAF7D;
+}
+
+/* VISUALS */
+.visuals {
+padding: 80px 0;
+}
+
+.visuals-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+
+.visuals-grid img {
+width: 100%;
+border-radius: 12px;
+transition: 0.3s;
+box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+opacity: 0.9;
+}
+
+.visuals-grid img:hover {
+transform: scale(1.03);
+opacity: 1;
+}
+
+/* SERVICES */
+.services {
+padding: 100px 0;
+}
+
+.services h2 {
+text-align: center;
+margin-bottom: 50px;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+}
+
+.card {
+background: #111816;
+padding: 30px;
+border-radius: 12px;
+border: 1px solid rgba(255,255,255,0.05);
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-5px);
+border-color: #3FAF7D;
+}
+
+/* WHY */
+.why {
+padding: 100px 0;
+}
+
+.why h2 {
+text-align: center;
+margin-bottom: 50px;
+}
+
+.why-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+}
+
+/* CTA */
+.cta {
+text-align: center;
+padding: 100px 20px;
 }
 
 /* CONTACT */
-
-.contact form{
-
-max-width:500px;
-
-margin:auto;
-
-display:flex;
-
-flex-direction:column;
-
+.contact {
+padding: 100px 0;
 }
 
-
-
-.contact input,.contact textarea{
-
-margin:10px 0;
-
-padding:12px;
-
-border:none;
-
-background:#111;
-
-color:#fff;
-
+.contact form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+max-width: 500px;
+margin: auto;
 }
 
-
-
-/* FOOTER */
-
-footer{
-
-text-align:center;
-
-padding:30px;
-
-background:#050807;
-
-font-size:14px;
-
+.contact input,
+.contact textarea {
+padding: 15px;
+border-radius: 8px;
+border: none;
 }
 
-
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{font-size:36px;}
-
+.contact textarea {
+min-height: 120px;
 }
 
 </style>
-
 </head>
 
-
-
-
-
 <body>
-<header style="padding:20px;">
-<img src="logo.png" style="height:40px;">
+
+<header>
+<img src="logo.png">
 </header>
 
-
-<!-- NAV -->
-
-<nav>
-
-<div class="container">
-
-<div class="logo">ZOONAR LOGISTICS</div>
-
-</div>
-
-</nav>
-
-
-
-<!-- HERO -->
-
 <section class="hero">
-
 <div class="container">
+
 <img src="logo-light.png" style="width:120px;margin-bottom:20px;">
+
 <h1>Global Logistics.<br>Intelligent Solutions.</h1>
 
 <p>Built for businesses that want to grow. Smart, scalable and sustainable supply chain solutions worldwide.</p>
 
-
-
-<a href="#contact" class="btn primary" style="box-shadow:0 10px 30px rgba(0,255,150,0.2);">
-Request a Quote
-</a>
-
+<a href="#contact" class="btn primary">Request a Quote</a>
 <a href="#contact" class="btn secondary">Contact Us</a>
 
 </div>
-
 </section>
 
+<!-- VISUALS -->
+<section class="visuals">
+<div class="container visuals-grid">
 
+<img src="zoonartrucks.png">
+<img src="zoonarbanner.jpg">
+<img src="logosquare.png">
+<img src="zoonargreen.png">
+
+</div>
+</section>
 
 <!-- SERVICES -->
-
-<section class="section container">
-
+<section class="services">
+<div class="container">
 <h2>Our Services</h2>
 
-
-
-<div class="services">
+<div class="services-grid">
 
 <div class="card">
-
-<h3>Logistics Tower</h3>
-
-<p>Real-time control and optimization of your logistics operations.</p>
-
+<h3>Freight Transport</h3>
+<p>Reliable road, sea and air freight solutions.</p>
 </div>
 
-
+<div class="card">
+<h3>Warehousing</h3>
+<p>Secure storage and fast distribution.</p>
+</div>
 
 <div class="card">
-
 <h3>Supply Chain Solutions</h3>
-
-<p>End-to-end supply chain management tailored to your business.</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Freight Forwarding</h3>
-
-<p>Global transport via air, sea and road with reliable partners.</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Transport Documentation</h3>
-
-<p>Accurate and compliant international shipping documentation.</p>
-
+<p>Smart logistics strategies tailored to your business.</p>
 </div>
 
 </div>
-
+</div>
 </section>
 
+<!-- WHY -->
+<section class="why">
+<div class="container">
+<h2>Why Zoonar Logistics</h2>
 
+<div class="why-grid">
 
-<!-- ABOUT -->
+<div>
+<h3>Global Network</h3>
+<p>Worldwide logistics partners.</p>
+</div>
 
-<section class="section container">
+<div>
+<h3>Fast & Efficient</h3>
+<p>Optimized transport routes.</p>
+</div>
 
-<h2>About Zoonar</h2>
+<div>
+<h3>Sustainable</h3>
+<p>Eco-friendly logistics solutions.</p>
+</div>
 
-<p>Zoonar Logistics supports growing businesses with smart, efficient and scalable logistics solutions. We act as a strategic partner — not just a service provider.</p>
-
+</div>
+</div>
 </section>
 
+<!-- CTA -->
+<section class="cta">
+<div class="container">
+<h2>Ready to optimize your logistics?</h2>
+<p>Request a quote today and let us handle your supply chain.</p>
 
-
-<!-- SUSTAINABILITY -->
-
-<section class="section container">
-
-<h2>Sustainability</h2>
-
-<p>We actively reduce emissions, optimize routes and collaborate with eco-conscious partners to build a greener logistics future.</p>
-
+<a href="#contact" class="btn primary">Request a Quote</a>
+</div>
 </section>
-
-
 
 <!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="container">
+<h2>Contact Us</h2>
 
-<section id="contact" class="section contact">
-
-<h2>Let’s Move Your Business Forward</h2>
-
-
-
-<form action="https://formsubmit.co/stephan@zoonarlogistics.com" method="POST">
-
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="email" name="email" placeholder="Email" required>
-
-<textarea name="message" placeholder="Request / Message"></textarea>
-
-
-
-<input type="hidden" name="_subject" value="New Zoonar Lead!">
-
-<input type="hidden" name="_captcha" value="false">
-
-
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your request..." required></textarea>
 
 <button class="btn primary">Send Request</button>
-
 </form>
-
-
-
-<p>Email: stephan@zoonarlogistics.com</p>
-
-<p>Phone: +31 6 36432794</p>
-
-<p>Location: Amsterdam</p>
-
-
-
+</div>
 </section>
 
-
-
-<footer>
-
-© 2026 Zoonar Logistics — All Rights Reserved
-
-</footer>
-
-
-
 </body>
-
 </html>
