@@ -12,103 +12,72 @@
 
 body{
 font-family:'Inter',sans-serif;
-background:#fff;
 color:#111;
+
+/* BACKGROUND IMAGE */
+background:
+linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+url('planetruckboat.png') center/cover no-repeat fixed;
 }
 
-/* HERO */
-.hero{
-height:90vh;
-background:url('zoonarbanner.jpg') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
-position:relative;
-}
-
-.hero::after{
-content:"";
-position:absolute;
+/* HEADER BANNER */
+.header{
 width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
+height:220px;
+background:url('zoonarbanner.jpg') center/cover no-repeat;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:800px;
-padding:20px;
+/* CONTAINER */
+.section{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
 }
 
-.hero h1{
-font-size:48px;
+/* TITLES */
+h1{
+font-size:42px;
+text-align:center;
 margin-bottom:20px;
 }
 
-.hero p{
-color:#ddd;
-margin-bottom:30px;
+h2{
+font-size:28px;
+margin-bottom:20px;
 }
 
-.btn{
-padding:14px 26px;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
-margin:5px;
-display:inline-block;
+p{
+color:#555;
+line-height:1.7;
 }
 
-.primary{background:#2E7D5B;color:#fff;}
-.secondary{border:1px solid #fff;color:#fff;}
-
-/* SECTION */
-.section{
-max-width:1200px;
-margin:auto;
-padding:100px 20px;
-}
-
-/* SERVICE BLOCKS */
+/* SERVICE BLOCK */
 .service{
 display:flex;
 align-items:center;
-gap:60px;
-margin-bottom:100px;
-}
-
-.service:nth-child(even){
-flex-direction:row-reverse;
+gap:50px;
+margin-bottom:80px;
 }
 
 .service img{
-width:50%;
+width:45%;
 border-radius:10px;
 }
 
 .service-text{
-width:50%;
+width:55%;
 }
 
-.service-text h2{
-font-size:30px;
-margin-bottom:20px;
-}
-
-.service-text p{
-color:#555;
-line-height:1.7;
+/* REVERSE */
+.service.reverse{
+flex-direction:row-reverse;
 }
 
 /* ADDITIONAL */
 .additional{
 text-align:center;
-color:#555;
-line-height:2;
-font-size:18px;
+max-width:700px;
+margin:auto;
 }
 
 /* MOBILE */
@@ -123,65 +92,79 @@ flex-direction:column !important;
 width:100%;
 }
 
-.hero h1{
-font-size:32px;
+h1{
+font-size:28px;
 }
 
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-<div class="hero-content">
-<h1>Control Your Supply Chain.<br>Scale Your Business.</h1>
-<p>
-Full-service logistics management — from strategy to execution.
-</p>
+<!-- HEADER -->
+<div class="header"></div>
 
-<a href="#" class="btn primary">Request a Quote</a>
-<a href="#services" class="btn secondary">Our Services</a>
-</div>
+<!-- INTRO -->
+<section class="section">
+<h1>Zoonar Logistics</h1>
+<p style="text-align:center;max-width:700px;margin:auto;">
+Zoonar Logistics provides full-service logistics management for businesses that demand control, efficiency and scalability.
+We act as your strategic logistics partner — managing operations, optimizing supply chains and executing transport worldwide.
+</p>
 </section>
 
 <!-- SERVICES -->
-<section class="section" id="services">
 
-<div class="service">
-<img src="zoonartrucks.png">
-<div class="service-text">
-<h2>Logistics Control Tower</h2>
-<p>
-We act as the central hub of your logistics operations.
-From planning to execution, we manage all flows, partners and performance.
-You gain full control, visibility and strategic decision-making power.
-</p>
-</div>
-</div>
+<section class="section">
 
+<!-- SUPPLY CHAIN -->
 <div class="service">
-<img src="zoonarbanner.jpg">
+<img src="logosquare.png">
 <div class="service-text">
 <h2>Supply Chain Management</h2>
 <p>
-We design and optimize complete supply chains.
-Reducing costs, improving efficiency and building scalable systems that support your growth.
-From supplier to end customer — we manage the entire process.
+We design, optimize and manage complete supply chains from end to end. Our approach focuses on creating efficient, scalable and cost-effective logistics structures tailored to your business.
+</p>
+<p>
+Our responsibilities include supplier coordination, inventory planning, demand forecasting, process optimization and continuous performance monitoring. We identify inefficiencies and implement strategic improvements that reduce operational costs while increasing delivery reliability.
+</p>
+<p>
+From sourcing to final delivery, we ensure your entire supply chain operates as one streamlined system.
 </p>
 </div>
 </div>
 
-<div class="service">
-<img src="zoonar-green.png">
+<!-- TRANSPORT -->
+<div class="service reverse">
+<img src="zoonartrucks.png">
 <div class="service-text">
-<h2>Global Transport</h2>
+<h2>Global Transport (Sea, Air & Road)</h2>
 <p>
-We organize international transport by sea, air and road.
-Flexible, reliable and cost-efficient solutions tailored to your business.
-Connecting you to global markets without complexity.
+We manage international transport across all major modalities — sea freight, air freight and road transport — ensuring your goods move efficiently across global markets.
+</p>
+<p>
+Our services include route planning, carrier selection, rate optimization, shipment tracking and full coordination of logistics partners. We adapt transport strategies based on urgency, cost and reliability.
+</p>
+<p>
+Whether it’s full container loads, urgent air shipments or cross-border trucking, we ensure seamless execution from origin to destination.
+</p>
+</div>
+</div>
+
+<!-- LOGISTICS TOWER -->
+<div class="service">
+<img src="zoonarbanner.jpg">
+<div class="service-text">
+<h2>Logistics Control Tower</h2>
+<p>
+Our Logistics Control Tower acts as the central hub of your entire logistics operation. We provide real-time visibility, coordination and control over all supply chain activities.
+</p>
+<p>
+We manage communication between suppliers, carriers, warehouses and customers, ensuring every part of the operation is aligned. Through data monitoring and proactive decision-making, we prevent delays and optimize performance.
+</p>
+<p>
+This centralized approach allows you to focus on growth while we manage the complexity behind the scenes.
 </p>
 </div>
 </div>
@@ -189,15 +172,30 @@ Connecting you to global markets without complexity.
 </section>
 
 <!-- ADDITIONAL -->
+
 <section class="section">
-<h2 style="text-align:center;margin-bottom:40px;">Additional Services</h2>
-
 <div class="additional">
-Documentation & Customs Handling<br>
-Warehousing & Storage<br>
-Distribution & Last-Mile Delivery
-</div>
 
+<h2>Additional Services</h2>
+
+<p>
+In addition to our core logistics services, we support your operations with a range of essential activities that ensure smooth execution across your supply chain.
+</p>
+
+<p>
+We handle documentation and customs processes, ensuring compliance with international regulations and minimizing delays at borders.
+</p>
+
+<p>
+Our warehousing and storage solutions provide flexible capacity and secure handling of goods, while our distribution services ensure efficient delivery to your customers.
+</p>
+
+<p>
+Together, these services create a complete logistics solution tailored to your business needs.
+</p>
+
+<img src="zoonargreen.png" style="margin-top:40px;width:200px;">
+</div>
 </section>
 
 </body>
