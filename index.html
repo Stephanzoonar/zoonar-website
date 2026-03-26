@@ -38,9 +38,25 @@ font-weight:600;
 
 /* HERO */
 .hero{
-padding:140px 20px;
+position: relative;
+padding:160px 20px;
 text-align:center;
-background:#fff;
+background: url('logo.png') center/40% no-repeat;
+background-color:#f7f9f8;
+}
+
+/* overlay voor leesbaarheid */
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(255,255,255,0.85);
+}
+
+/* content boven overlay */
+.hero h1,
+.hero p{
+position:relative;
 }
 
 .hero h1{
