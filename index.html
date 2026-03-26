@@ -5,205 +5,166 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zoonar Logistics</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-font-family:'Inter',sans-serif;
-color:#111;
-background:#fff;
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-/* CONTAINER */
-.container{
-max-width:1200px;
-margin:auto;
-padding:0 20px;
+body {
+font-family:'Inter', sans-serif;
+color:#111;
+background:#f7f9f8;
 }
 
 /* HEADER */
-header{
-position:fixed;
-top:0;
-width:100%;
-background:#fff;
-z-index:1000;
+header {
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+padding:20px 40px;
+background:#fff;
 }
 
-header img{
-height:45px;
+header img {
+height:40px;
 }
 
-.btn{
+.btn {
 background:linear-gradient(135deg,#2E7D5B,#1f5f45);
 color:#fff;
-padding:10px 20px;
+padding:12px 22px;
 border-radius:8px;
 text-decoration:none;
 font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-2px);
 }
 
 /* HERO */
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.92)),
-url('planetruckboat.png') center/cover no-repeat;
-display:flex;
-align-items:center;
+.hero {
+padding:100px 20px;
 text-align:center;
-padding-top:80px;
+background:url('zoonarbanner.jpg') center/cover no-repeat;
 }
 
-.hero h1{
-font-size:48px;
-background:linear-gradient(90deg,#1f5f45,#2E7D5B);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+.hero h1 {
+font-size:42px;
+color:#1f5f45;
 margin-bottom:20px;
 }
 
-.hero p{
+.hero p {
 max-width:700px;
 margin:auto;
-color:#555;
-font-size:18px;
-}
-
-/* SECTION */
-section{
-padding:100px 0;
-}
-
-h2{
-text-align:center;
-font-size:32px;
-margin-bottom:50px;
-color:#1f5f45;
-}
-
-/* SERVICES CARDS */
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.card{
-background:#fff;
-padding:30px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card img{
-width:100%;
-border-radius:12px;
-margin-bottom:15px;
-}
-
-/* SERVICE DETAIL */
-.service{
-display:flex;
-align-items:center;
-gap:60px;
-margin-bottom:80px;
-}
-
-.service.reverse{
-flex-direction:row-reverse;
-}
-
-.service img{
-width:45%;
-border-radius:12px;
-}
-
-.service-text{
-width:55%;
-}
-
-.service-text h3{
-color:#1f5f45;
-margin-bottom:15px;
-}
-
-.service-text p{
-color:#555;
-margin-bottom:10px;
-}
-
-/* SIMPLE SECTIONS */
-.simple{
-max-width:800px;
-margin:auto;
-text-align:center;
-}
-
-.simple p{
 color:#555;
 line-height:1.7;
 }
 
-/* CONTACT */
-form{
-max-width:600px;
+/* CONTAINER */
+.container {
+max-width:1100px;
 margin:auto;
+padding:60px 20px;
 }
 
-input,textarea{
-width:100%;
-padding:12px;
+.simple {
+max-width:700px;
+text-align:center;
+}
+
+/* SERVICES */
+.service {
+display:flex;
+align-items:center;
+gap:50px;
+margin-bottom:80px;
+}
+
+.service.reverse {
+flex-direction:row-reverse;
+}
+
+.service img {
+width:45%;
+border-radius:10px;
+}
+
+.service-text {
+width:55%;
+}
+
+.service-text h3 {
+font-size:22px;
+color:#1f5f45;
 margin-bottom:15px;
-border:1px solid #ddd;
+}
+
+.service-text p {
+color:#555;
+line-height:1.7;
+margin-bottom:15px;
+}
+
+/* TITLES */
+h2 {
+font-size:28px;
+color:#1f5f45;
+margin-bottom:20px;
+}
+
+/* CONTACT */
+form {
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input, textarea {
+padding:12px;
 border-radius:6px;
+border:1px solid #ccc;
+font-family:inherit;
+}
+
+button {
+background:#2E7D5B;
+color:#fff;
+border:none;
+padding:12px;
+border-radius:6px;
+cursor:pointer;
 }
 
 /* FOOTER */
-footer{
+footer {
 text-align:center;
-padding:40px;
-background:#f5f5f5;
-margin-top:50px;
+padding:30px;
+color:#777;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-.service{
-flex-direction:column;
-}
-.service img,.service-text{
-width:100%;
-}
-.hero h1{
-font-size:32px;
-}
+.service {
+flex-direction:column !important;
 }
 
+.service img,
+.service-text {
+width:100%;
+}
+
+.hero h1 {
+font-size:28px;
+}
+}
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
 <img src="logo.png">
 <a href="mailto:info@zoonarlogistics.com" class="btn">Contact Us</a>
@@ -211,83 +172,17 @@ font-size:32px;
 
 <!-- HERO -->
 <section class="hero">
-<div class="container">
-<h1>Control Your Supply Chain.<br>Scale Your Business.</h1>
+<h1>Zoonar Logistics</h1>
 <p>
-Zoonar Logistics delivers full-service logistics management, from strategy to execution.
-We build efficient, scalable and reliable supply chains worldwide. We design, optimize and manage end-to-end supply chains tailored to your business.
-From supplier coordination and inventory planning to demand forecasting and process optimization,
-we ensure efficiency, cost control and scalability across your entire operation.
+Zoonar Logistics provides full-service logistics management for businesses that demand control,
+efficiency and scalability. We act as your strategic logistics partner,
+optimizing supply chains and executing transport worldwide.
 </p>
-</div>
 </section>
 
-<!-- CORE SERVICES -->
-<section>
-<div class="container">
-<h2>Core Services</h2>
-
-<div class="cards">
-<div class="card">
-<img src="supply.png">
-<h3>Supply Chain Management</h3>
-<p>End-to-end optimization, cost control, and scalable logistics structures.Our approach focuses on creating transparency, reducing operational costs and improving overall efficiency.
-</p>
-<p>
-Our responsibilities include supplier coordination, inventory planning, demand forecasting,
-process optimization and performance monitoring.
-</p>
-<p>
-We ensure that every part of your supply chain works seamlessly together,
-allowing your business to scale with confidence and control.
-</p>
-</div>
-
-<div class="card">
-<img src="zoonartrucks.png">
-<h3>Global Transport</h3>
-<p>We manage global transport solutions across sea, air and road.
-By selecting the right carriers, optimizing routes and monitoring shipments in real-time,
-we ensure reliable and cost-efficient delivery worldwide.</p>
-  <p>
-We organize and manage global transportation across sea freight, air freight and road transport.
-Our team ensures optimal routing, carrier selection and full coordination.
-</p>
-<p>
-From full container loads and urgent air shipments to cross-border trucking,
-we provide flexible and reliable solutions tailored to your needs.
-</p>
-<p>
-With real-time tracking and proactive communication,
-we guarantee full control from origin to destination.
-</p>
-</div>
-
-<div class="card">
-<img src="zoonargreen.png">
-<h3>Logistics Control Tower</h3>
-<p><p>
-Our Logistics Control Tower acts as the central hub of your entire logistics operation.
-We provide real-time visibility, coordination and control across all partners, shipments and processes.
-</p>
-
-<p>
-By centralizing communication and data, we enable faster decision-making,
-proactive issue resolution and improved operational performance.
-</p>
-
-<p>
-We monitor KPIs, manage exceptions and ensure that every part of your logistics network
-runs efficiently and aligned with your business goals.
-</p>
-</div>
-</div>
-</div>
-</section>
-
-<div class="container service reverse">
+<!-- ADDITIONAL SERVICES -->
+<section class="container service reverse">
 <img src="earth.png">
-
 <div class="service-text">
 <h3>Additional Services</h3>
 
@@ -319,99 +214,94 @@ Our additional services are designed to integrate seamlessly with your logistics
 reducing complexity and improving efficiency while allowing you to focus on growing your business.
 </p>
 </div>
-</div>
+</section>
 
-<section>
-<div class="container simple">
+<!-- TESTIMONIALS -->
+<section class="container simple">
 <h2>What Customers Say About Us</h2>
 
-<p>
-"Zoonar Logistics transformed our supply chain completely. Their structured approach
-and real-time visibility gave us full control over our operations."
-</p>
+<p>"Zoonar Logistics transformed our supply chain completely.
+Their structured approach gave us full control."</p>
 
-<p>
-"Reliable, proactive and highly professional. We trust Zoonar with all our global shipments."
-</p>
+<p>"Reliable, proactive and highly professional.
+We trust Zoonar with all our shipments."</p>
 
-<p>
-"Their ability to scale with our business and optimize costs has made them a key partner."
-</p>
-</div>
+<p>"Their ability to scale with our business made them a key partner."</p>
 </section>
 
 <!-- WHO WE ARE -->
-<section>
-<div class="container simple">
+<section class="container simple">
 <h2>Who We Are</h2>
+
 <p>
 Zoonar Logistics is a forward-thinking logistics partner focused on control, efficiency and growth.
-We specialize in managing complex supply chains and transforming them into structured,
-scalable and high-performing operations.
+We specialize in managing complex supply chains and transforming them into structured operations.
 </p>
+
 <p>
 With a strong global network and hands-on approach,
-we act as an extension of your business rather than just a service provider.
+we act as an extension of your business.
 </p>
+
 <p>
 Our mission is simple: to give you full control over your logistics,
-while enabling your business to grow without limitations.
+while enabling growth without limits.
 </p>
-</div>
 </section>
 
 <!-- HOW WE WORK -->
-<section>
-<div class="container simple">
+<section class="container simple">
 <h2>How We Work</h2>
+
 <p>
-We start by analyzing your current logistics structure and identifying opportunities for improvement.
-Based on this, we design a tailored logistics strategy aligned with your business goals.
+We analyze your logistics structure and identify improvement opportunities,
+then design a tailored strategy aligned with your business goals.
 </p>
+
 <p>
-We then implement and manage the entire operation, from supplier coordination to final delivery,
-ensuring full visibility and control at every stage.
+We implement and manage the full operation,
+ensuring visibility and control at every stage.
 </p>
+
 <p>
-Our approach is proactive, data-driven and focused on continuous optimization,
-allowing us to adapt quickly to changing market conditions.
+Our approach is proactive and data-driven,
+allowing continuous optimization.
 </p>
-</div>
 </section>
 
 <!-- WHY ZOONAR -->
-<section>
-<div class="container simple">
+<section class="container simple">
 <h2>Why Zoonar</h2>
+
 <p>
 Choosing Zoonar means choosing control, reliability and scalability.
-We combine operational expertise with strategic insight to deliver real value.
+We deliver real value through expertise and insight.
 </p>
+
 <p>
-Our strength lies in transparency, proactive communication and a strong global network,
-ensuring your logistics always run smoothly.
+Our strength lies in transparency and a strong global network,
+ensuring smooth operations.
 </p>
+
 <p>
-We don’t just move goods, we optimize your entire logistics performance
-and support your long-term growth.
+We don’t just move goods,
+we optimize your logistics performance and support long-term growth.
 </p>
-</div>
 </section>
 
 <!-- CONTACT -->
-<section>
-<div class="container">
+<section class="container">
 <h2>Contact</h2>
 
 <form>
 <input type="text" placeholder="Your Name">
 <input type="email" placeholder="Your Email">
 <textarea rows="5" placeholder="Your Message"></textarea>
-<button class="btn">Send Message</button>
+<button>Send Message</button>
 </form>
-</div>
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2026 Zoonar Logistics — Logistics Beyond Limits
 </footer>
