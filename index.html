@@ -95,15 +95,15 @@ margin: 0 auto;
 padding: 60px 20px;
 }
 .hero {
-position: relative;
-background: url('zoonartrucks.png') center/cover no-repeat;
-color: white;
+background: url('logo.png') center/contain no-repeat;
+background-color: #f7f9f8;
 }
+
 .hero::before {
 content: "";
 position: absolute;
 inset: 0;
-background: rgba(0,0,0,0.45);
+background: rgba(255,255,255,0.85);
 }
 .hero * {
 position: relative;
@@ -111,6 +111,12 @@ z-index: 2;
 }
 .hero-logo {
 height: 160px;
+}  
+.hero h1 {
+  color: #1f5f3a;
+}
+.hero p {
+  dolor: #333;
 }  
 /* SERVICE BLOCK */
 .service {
@@ -185,7 +191,6 @@ color: #777;
 <body>
 
 <header>
-<img src="logosquare.png" class="hero-logo">
 <a href="mailto:info@zoonarlogistics.com" class="btn">Contact Us</a>
 </header>
 <img src="logosquare.png" alt="Zoonar Logo" class="hero-logo">
